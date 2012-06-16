@@ -51,11 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\WaveletTransform.cs" />
-    <Compile Include="UI\CtrlAsciiView.cs">
+    <Compile Include="DataModel\DataGroup.cs" />
+    <Compile Include="DataModel\DataMatrix.cs" />
+    <Compile Include="DataModel\DataRow.cs" />
+    <Compile Include="UI\CtrlAsciiTransformView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\CtrlAsciiView.Designer.cs">
-      <DependentUpon>CtrlAsciiView.cs</DependentUpon>
+    <Compile Include="UI\CtrlAsciiTransformView.Designer.cs">
+      <DependentUpon>CtrlAsciiTransformView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CtrlFileView.cs">
       <SubType>UserControl</SubType>
@@ -75,11 +78,11 @@
     <Compile Include="UI\CtrlRawdataView.Designer.cs">
       <DependentUpon>CtrlRawdataView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\CtrlTransformView.cs">
+    <Compile Include="UI\CtrlTransformSingleStepView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\CtrlTransformView.Designer.cs">
-      <DependentUpon>CtrlTransformView.cs</DependentUpon>
+    <Compile Include="UI\CtrlTransformSingleStepView.Designer.cs">
+      <DependentUpon>CtrlTransformSingleStepView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
@@ -89,11 +92,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="SampleData\baracktocat.jpg">
+    <Compile Include="Utils\ExternalProcess.cs" />
+    <Content Include="Data\baracktocat.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="UI\CtrlAsciiView.resx">
-      <DependentUpon>CtrlAsciiView.cs</DependentUpon>
+    <Content Include="Data\baracktocat.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="UI\CtrlAsciiTransformView.resx">
+      <DependentUpon>CtrlAsciiTransformView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CtrlFileView.resx">
       <DependentUpon>CtrlFileView.cs</DependentUpon>
@@ -104,8 +111,8 @@
     <EmbeddedResource Include="UI\CtrlRawdataView.resx">
       <DependentUpon>CtrlRawdataView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\CtrlTransformView.resx">
-      <DependentUpon>CtrlTransformView.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CtrlTransformSingleStepView.resx">
+      <DependentUpon>CtrlTransformSingleStepView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

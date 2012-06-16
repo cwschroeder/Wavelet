@@ -20,11 +20,10 @@ namespace Wavelet.UI
       /// Sets the orginial image.
       /// </summary>
       /// <param name="image">The image.</param>
-      public void SetOrginialImage(Bitmap image, string fileName, long fileSize)
+      public void SetOriginalImage(Bitmap image, string fileName, long fileSize)
       {
          // fill picture box
          this.pictureBoxUntransformed.SizeMode = PictureBoxSizeMode.Zoom;
-         //this.pictureBoxUntransformed.ClientSize = new Size(image.Height, image.Width);
          this.pictureBoxUntransformed.Image = image;
 
          // fill textbox
@@ -37,9 +36,26 @@ namespace Wavelet.UI
       /// </summary>
       /// <param name="image">The image.</param>
       /// <param name="fileName">Name of the file.</param>
-      public void SetTransformedImage(Bitmap image, string fileName, int fileSize)
+      public void SetTransformedImage(Bitmap image, string fileName, long fileSize)
       {
-         throw new NotImplementedException();
+          // fill picture box
+          this.pictureBoxUntransformed.SizeMode = PictureBoxSizeMode.Zoom;
+          this.pictureBoxUntransformed.Image = image;
+
+          // fill textbox
+          this.txtPicUntransformedInfo.Text = string.Format(
+             "Transformed file\n\n\nFile Name: {0}\n\nFile Size: {1} Bytes\n", fileName, fileSize);
       }
+
+      public void SetRetransformedImage(Bitmap image, string fileName, long fileSize)
+       {
+           // fill picture box
+           this.pictureBoxUntransformed.SizeMode = PictureBoxSizeMode.Zoom;
+           this.pictureBoxUntransformed.Image = image;
+
+           // fill textbox
+           this.txtPicUntransformedInfo.Text = string.Format(
+              "Retransformed file\n\n\nFile Name: {0}\n\nFile Size: {1} Bytes\n", fileName, fileSize);
+       }
    }
 }
